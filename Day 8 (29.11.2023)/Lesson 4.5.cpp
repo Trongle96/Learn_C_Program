@@ -1,5 +1,6 @@
 //Nhap 1 chuoi S va xuat ra man hinh.
 //Nhap 1 chuoi M , xoa chuoi M neu M co trong S va in ket qua.
+//Le Hoang Trong.
 #include <iostream>
 #include <string>
 #include <cstring>
