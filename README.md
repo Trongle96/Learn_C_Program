@@ -6,7 +6,7 @@
 ## C++ Classes/Objects  
 ***
 #### * Ví dụ tạo 1 lớp Class trong C++ như sau:
-```
+```C++
  class MyClass {       // The class
   public:             // Access specifier
     int myNum;        // Attribute (int variable)
@@ -34,7 +34,7 @@ int main() {
 ## C++ Class Methods 
 ***
 #### * Một ví dụ về phương thức trong C++ như sau:
-```
+```C++
 class MyClass {        // The class
   public:              // Access specifier
     void myMethod() {  // Method/function defined inside the class
@@ -54,7 +54,7 @@ int main() {
 ## C++ Constructor
 ***
 #### * Là hàm tạo trong C++ là 1 phương thức đặc biệt luôn được gọi tự động mỗi khi 1 đối tượng của lớp được tạo. Thường được dùng để khởi tạo giá trị cho các đối tượng của class 
-```
+```C++
 class Car {        // The class
   public:          // Access specifier
     string brand;  // Attribute
@@ -79,7 +79,53 @@ int main() {
 }
 ```
 #### * Đối tượng carobj1 và carobj2 được khởi tạo bằng hàm tạo constructor với các tham số là từng thuộc tính trong lớp. Ngoài ra còn có thể khởi tạo giá trị như sau:
-```
+```C++
 Car carObj1 = Car("BMW", "X5", 1999);
 Car carObj2 = Car("Ford", "Mustang", 1969);
 ```
+## C++ Access Specifier
+***
+#### * Trong C++ có 3 bộ xác định truy cập:
+     - Public: Các thành viên trong lớp có thể được truy cập từ ngoài lớp.
+     - Private: Các thành viên trong lớp không thể được truy cập từ ngoài lớp
+     - Protected: Các thành viên trong lớp không thể được truy cập từ bên ngoài lớp, nhưng có thể được truy cập từ lớp kế thừa.
+## C++ Encapsulation (Tính đóng gói) 
+***     
+#### * Tính đóng gói là khả năng bảo mật dữ liệu "nhạy cảm" không được truy cập và để làm được thì phải khai báo các thành viên của lớp dưới dạng private.
+#### * Khi muốn đọc và sửa đổi giá trị của thành viên được set private thì ta có thể dùng phương thức **get** và **set** công khai như sau:
+```C++
+#include <iostream>
+using namespace std;
+
+class Employee {
+  private:
+    // Private attribute
+    int salary;
+
+  public:
+    // Setter
+    void setSalary(int s) {
+      salary = s;
+    }
+    // Getter
+    int getSalary() {
+      return salary;
+    }
+};
+
+int main() {
+  Employee myObj;
+  myObj.setSalary(50000);
+  cout << myObj.getSalary();
+  return 0;
+}
+```
+#### * Trong đoạn code trên thì ta đã dùng hai bước, bước đầu là dùng phương thức set (hàm setSalary hàm để gán giá trị cho thuộc tính salary (đang ở private)) sau đó là phương thức get (hàm getSalary để return giá trị của thuộc tính salary mà ta đã set ở bước trên).
+
+ ## C++ Inheritance (tính kế thừa)
+#### * Có thể kế thừa các thuộc tính và phương thức từ lớp này sang lớp khác đó chính là tính kế thừa trong C++. 
+##### * Lớp dẫn xuất (Lớp con) : Lớp kế thừa từ lớp khác.
+##### * Lớp cơ sở (Lớp cha): Lớp được kế thừa từ.
+#### * Để lớp con kế thừa từ lớp cha , thực hiện bằng [lớp con] : [lớp cha].
+
+ 
