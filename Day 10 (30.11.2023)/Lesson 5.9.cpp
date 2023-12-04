@@ -26,10 +26,11 @@ int main(){
 	}
 	cout<<endl;
 }
-	
+	cout<<arrA[0];
 	for ( int c = 0 ; c < n; c++){
 	arrange(arrA, c ,m);	
 	}
+	
 	cout<<"Ma tran sau khi sap xep lai tang dan la: "<<endl;
 	for ( int d = 0 ; d < n; d++){
 	for ( int e = 0 ; e < m; e++){
