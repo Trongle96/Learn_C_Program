@@ -31,6 +31,7 @@ int main() {
 #### * Nếu khi khởi tạo 1 class mà ko chỉ định cụ thể access specifier là public hay private thì các thuộc tính và phương thức trong lớp mặc định là private.
 #### * Biến int myNum và biến string myString là thành viên của lớp và cụ thể là thuộc tính của lớp.
 #### * Khai báo 1 đối tượng thuộc lớp MyClass bằng cách [Tên lớp][tên đối tượng].; và truy cập các thành viên của lớp bằng cách [tên đối tượng].[tên thành viên].
+#### * Một Class trong C++ thực chất là 1 kiểu dữ liệu do người dùng định nghĩa với trong đó là các thuộc tính và phương thức. Việc khai báo 1 class thực chất sẽ ko cấp phát bất kỳ bộ nhớ nào mà chỉ đang định nghĩa class đó là như thế nào. Lưu ý khi đặt tên cho 1 class thì chữ cái đầu tiên phải in hoa.
 ## C++ Class Methods 
 ***
 #### * Một ví dụ về phương thức trong C++ như sau:
