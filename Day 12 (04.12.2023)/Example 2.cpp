@@ -14,6 +14,7 @@ class Sophuc{
 	public:
  	double phanthuc;
 	double phanao;
+	Sophuc() {};
 	Sophuc(double phanthuc, double phanao){
 	this -> phanthuc = phanthuc;
 	this -> phanao = phanao;
@@ -87,7 +88,7 @@ int main(){
 	d.showso(showhieu);
 	e.nhan(a,b);
 	e.showso(showtich);
-	Sophuc f(0,0);
+	Sophuc f;
 	f.chia(a,b);
 	f.showso(showthuong);
 	
