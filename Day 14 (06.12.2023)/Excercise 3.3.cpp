@@ -48,7 +48,7 @@ int main(){
 	int mahang, dongia, maphieu;
 	string tenhang;
 	Phieu arr[100];
-	Hang list;
+
 	int check;
 	
 	cout<<"Nhap so phieu can nhap thong tin : "<<endl;
