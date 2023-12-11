@@ -79,7 +79,6 @@ class SinhVien
 				}
 			}
 			
-			cout<<a[0].hoTen;
 		}
 		
 };
@@ -96,15 +95,9 @@ int main()
 		list.nhap();
 	}
 	
-	cout<<list.data[0].hoTen;
-	
 	sxDiem(list.data);
-	
-	cout<<list.data[0].hoTen;	
-	
-	
-	
-//	list.xuat();		
+			
+	list.xuat();		
 }
 
 	
