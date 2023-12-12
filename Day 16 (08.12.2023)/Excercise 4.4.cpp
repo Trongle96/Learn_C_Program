@@ -74,9 +74,16 @@ int main()
 		PtBac2 x;
 		
 		x = x.nhap();
+		PtBac2 y;
+		
+		y=y.nhap();
 			
 		x.xuat();
 		
 		x.giai();
+		
+		y.xuat();
+		
+		y.giai();
 		
 }
