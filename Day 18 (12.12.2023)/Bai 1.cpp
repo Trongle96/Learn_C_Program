@@ -1,24 +1,25 @@
+//https://shareprogramming.net/tong-hop-bai-tap-lap-trinh-huong-doi-tuong-trong-java/
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
+class Qlcb;
 class Canbo
 {
-	public:
-//	protected:
+
+	private:
 	string hoten;
 	int tuoi;
 	string gt;	
 	string diaChi;
 	string chucVu;
 	
-//	public:
+	public:
 	void nhap()
 	{	
 	cout<<"================================="<<endl;
 	cout<<"Nhap ho va ten can bo: "<<endl;
-//	cin.ignore();
 	getline(cin,this -> hoten);
 	cout<<"Nhap tuoi can bo: "<<endl;
 	cin>> this -> tuoi;
@@ -37,6 +38,7 @@ class Canbo
 	cout<<"Gioi tinh la: "<<this -> gt<<endl;
 	cout<<"Dia chi la: "<<this -> diaChi<<endl;
 	}
+	friend class Qlcb;
 };
 
 
@@ -49,6 +51,7 @@ class Congnhan : public Canbo
 		Canbo :: nhap();
 		cout<<"Nhap bac cua cong nhan: "<<endl;
 		cin>>this -> bac;
+		cin.ignore();
 	}
 	
 	void xuat()
@@ -128,7 +131,7 @@ class Qlcb
 		count++;
 	}
 	
-	void searchCB(string x)
+		 void searchCB(string x)
 	{
 		for(int i = 0; i < this -> cn.size(); i++)
 		{
@@ -155,6 +158,29 @@ class Qlcb
 		}
 	}
 	
+	 void xuat()
+	{
+		cout<<"Thong tin cua tat ca can bo cua cong ty la: "<<endl;
+		for(int i = 0; i < this -> cn.size(); i++)
+		{
+					this -> cn[i].xuat();
+		}
+		
+		for(int i = 0; i < this -> nv.size(); i++)
+		{
+					this -> nv[i].xuat();
+		}
+		
+		for(int i = 0; i < this -> ks.size(); i++)
+		{
+					this -> ks[i].xuat();
+		}
+	}
+	
+	~Qlcb()
+	{	cout<<"!!!!!!!!!!!!!!!!!!!!!!!!!! "<<endl;
+		cout<<"Thoat khoi chuong trinh: "<<endl;
+	}
 
 };
 
@@ -169,19 +195,18 @@ int main()
 	Qlcb y;
 	cout<<"Nhap so luong can bo them moi: "<<endl;
 	cin>>n;
+	cin.ignore();
 	for (int i = 0; i < n; i++)
 	{
 	cout<<"Nhap chuc danh can bo moi: "<<endl;
-	cin.ignore();
 	getline(cin,x);
 	cout<<x<<endl;
 	y.themCB(x);
 	}	
 	cout<<"Nhap Ho va ten can bo can tim kiem thong tin: "<<endl;
- 	cin.ignore();
-	getline(cin,z);
-	y.searchCB(z);
-	
+ 	getline(cin,z);
+	y.searchCB(z);// Goi ham tim can bo
+	y.xuat();// Goi ham xuat thong tin tat ca can bo;
 	return 0;
 }
 
