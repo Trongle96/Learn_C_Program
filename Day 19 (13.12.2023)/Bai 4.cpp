@@ -62,7 +62,7 @@ class Hogd
 {
 	int soTV, soNha;
 	vector <Nguoi> data;
-		
+	
 	public:
 
 	void nhap()
@@ -110,6 +110,7 @@ class Khupho
 	vector <Hogd> data_Hogd;
 	public:
 	
+	vector <int> arrID;
 	static int count;
 	void nhap()
 	{
@@ -127,6 +128,7 @@ class Khupho
 			data_Hogd[i].xuat();
 		}
 	}
+	friend class Hogd;
 };
 int Khupho :: count = 1;
 
@@ -139,7 +141,6 @@ int main()
 	for(int i = 0; i < n; i++)
 	{
 		x.nhap();
-		
 	}
 	x.xuat();
 	return 0;
